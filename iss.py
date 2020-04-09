@@ -14,7 +14,7 @@ cur_url = 'http://api.open-notify.org/iss-now.json'
 def get_astro():
     astro = requests.get(base_url)
     astro = astro.json()
-    # print("Astronauts: ")
+
     for person in astro["people"]:
         print("  {} is currently on the {}.".format(
             person["name"], person["craft"]))
